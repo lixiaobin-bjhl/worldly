@@ -1,15 +1,15 @@
 [
     {
         "fileIn": [
-            "1.js",
-            "2.js"
+            "test/1.js",
+            "test/2.js"
         ],
         "fileOut": "mini_test.js"
     },
 	{
         "fileIn": [
-            "1.js",
-            "2.js"
+            "test/1.js",
+            "test/2.js"
         ],
         "fileOut": "hehe.js"
     }
