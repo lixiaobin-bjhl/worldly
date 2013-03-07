@@ -1,0 +1,38 @@
+{
+  "name": "worldly",
+  "description": "在前端开发过程中，开发时需要模块颗粒化，发布时文件又需要整合。worldly为你解决合并文件，压缩文件，实时检测文件发现变化。",
+  "keywords": [
+    "compress",
+    "combine",
+    "filewatch"
+  ],
+  "version": "0.0.1",
+  "homepage": "https://github.com/lixiaobin8878",
+  "author": "http://www.weibo.com/xiaobin8878",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lixiaobin8878/worldly"
+  },
+  "bugs": {
+    "email": "lixiaobin8878@gmail.com",
+    "url": "https://github.com/lixiaobin8878/worldly/issues"
+  },
+  "directories": {
+    "doc": "./doc",
+    "lib": "./lib",
+    "bin": "./bin"
+  },
+  "bin": "",
+  "dependencies": {
+  },
+  "bundleDependencies": [
+  ],
+  "devDependencies": {
+  },
+  "engines": {
+    "node": "0.6 || 0.7 || 0.8"
+  },
+  "scripts": {
+    "test": ""
+  }
+}
