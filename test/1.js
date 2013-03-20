@@ -2,6 +2,4 @@
 /*
  * test1
   */
-var str1 = 'this is my test1';
-
-
+var str1 = 'js combine testfff'

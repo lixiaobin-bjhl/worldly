@@ -1,17 +1,27 @@
-[
-    {
-        "fileIn": [
-            "test/1.js",
-            "test/2.js"
-        ],
-        "fileOut": "mini_test.js"
-    },
-	{
-        "fileIn": [
-            "test/1.js",
-            "test/2.js"
-        ],
-        "fileOut": "hehe.js"
-    }
-
-]
+{
+    "combinJS": [
+        {
+            "fileIn": [
+                "/test/2.js"
+            ],
+            "fileOut": "/mini_test.js"
+        },
+        {
+            "fileIn": [
+                "/test/1.js",
+                "/test/2.js"
+            ],
+            "fileOut": "/hehe.js"
+        }
+    ],
+    "combinCSS": [
+        {
+            "fileIn": [
+                "/test/1.css"
+            ],
+            "fileOut": "/hehe.css"
+        }
+    ],
+	"buildPath": "/my/worldly/build",
+	"workPath": "/my/worldly"	
+}

@@ -1,0 +1,7 @@
+#!/bin/sh
+
+if [ -x "`dirname "$0"`/node.exe" ]; then
+  "`dirname "$0"`/node.exe" "`dirname "$0"`/../src/worldly.js" "$@"
+else
+  node "`dirname "$0"`/../src/wordly.js" "$@"
+fi

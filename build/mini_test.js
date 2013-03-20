@@ -1,1 +1,1 @@
-;var str1="this is my test1";var str2="this is my test2"
+;var str2="ha 2 啊"
