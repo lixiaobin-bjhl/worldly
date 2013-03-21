@@ -6,7 +6,7 @@
     "combine",
     "filewatch"
   ],
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "https://github.com/lixiaobin8878",
   "author": "http://www.weibo.com/xiaobin8878",
   "repository": {
@@ -22,10 +22,12 @@
     "lib": "./lib",
     "bin": "./bin"
   },
-  "bin": "",
+  "bin": "./main.js",
   "dependencies": {
+  	
   },
   "bundleDependencies": [
+  	"fastcgi"
   ],
   "devDependencies": {
   },
@@ -33,6 +35,6 @@
     "node": "0.6 || 0.7 || 0.8"
   },
   "scripts": {
-    "test": ""
+    "test": "node ./src/worldly.js"
   }
 }
