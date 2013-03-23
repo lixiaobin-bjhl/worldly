@@ -6,7 +6,7 @@
     "combine",
     "filewatch"
   ],
-  "version": "0.0.2",
+  "version": "0.0.4",
   "homepage": "https://github.com/lixiaobin8878",
   "author": "http://www.weibo.com/xiaobin8878",
   "repository": {
@@ -24,7 +24,8 @@
   },
   "bin": "./main.js",
   "dependencies": {
-  	
+  	"clean-css": ">= 0.10.1",
+	"uglify-js": ">=2.2.5"
   },
   "bundleDependencies": [
   	"fastcgi"
