@@ -18,11 +18,12 @@ worldly
 --------
 
 ###安装
-* 安装node和npm
+安装node和npm
 ``` bash
 	$ [sudo] npm install wroldly -g
 ```
-* 安装git 
+安装git 
+
 ``` bash
 	$ git clone https://github.com/lixiaobin8878/worldly.git 
 ```
