@@ -18,24 +18,24 @@ worldly
 --------
 
 ###安装
-*安装node和npm  执行命令　
+* 安装node和npm
 ``` bash
-  $ [sudo] npm install wroldly -g
+	$ [sudo] npm install wroldly -g
 ```
-*安装git 
+* 安装git 
 ``` bash
-	git clone https://github.com/lixiaobin8878/worldly.git 
+	$ git clone https://github.com/lixiaobin8878/worldly.git 
 ```
 ###使用方法
-*在命令行中输入Ｖ查看package.json文件的路径，修改配置文件
-*在系统终端执行 worldly
+* 在命令行中输入Ｖ查看package.json文件的路径，修改配置文件
+* 在系统终端执行 worldly
 
 ###命令行说明
-*exit  退出worldly
-*help  查看帮助
-*ls    查看监控的文件
-*ver   查看worldly 的版本号
-*V     查看配置文件的路径
+* exit  退出worldly
+* help  查看帮助
+* ls    查看监控的文件
+* ver   查看worldly 的版本号
+* V     查看配置文件的路径
 
 
 
