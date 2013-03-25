@@ -2,7 +2,7 @@
  * 命令行UI程序
  * 依赖shell
  */
-var shell = require('../lib/shell.js');
+global.shell = require('../lib/shell.js');
 var fs = require('fs');
 //由app.js传进来的worldly实例
 var worldly;

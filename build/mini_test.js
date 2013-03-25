@@ -1,1 +1,1 @@
-;var str2="ha 2 啊"
+var str2="ha 2 啊";

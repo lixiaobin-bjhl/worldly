@@ -66,9 +66,8 @@ function jsMinifier(fileIn, fileOut) {
 		//finalCode += ';' + pro.gen_code(ast);
 	}
 	//fs.writeFileSync(config.buildPath + fileOut, finalCode, 'utf8');
-	UglifyJS.minify(l, {
-		outSourceMap: config.buildPath + fileOut
-	});
+	var r = UglifyJS.minify(l);
+	fs.writeFileSync(config.buildPath + fileOut, r.code, 'utf8');
 }
 
 /*
@@ -80,7 +79,7 @@ function createDir(p) {
 	if (!fs.existsSync(p)) {
 		try {
 			fs.mkdirSync(p, 0777);
-			console.log('mkdir: ' + p);
+			shell.print('mkdir: ' + p);
 		} catch(e) {
 			console.log(e.stack);
 		}
@@ -131,7 +130,9 @@ function updateByWatchFile(file) {
 		for (var i in typeFiles[item].fileIn) {
 			if (typeFiles[item].fileIn[i] == file) {
 				f(typeFiles[item].fileIn, typeFiles[item].fileOut);
-				console.log('Compiled: ' + typeFiles[item].fileOut);
+				shell.prompt();
+				console.log('Compiled: ' + paths.base + config.buildPath + typeFiles[item].fileOut);
+				shell.prompt();
 				break;
 			}
 		}
@@ -162,7 +163,7 @@ WatchFilesManage.prototype.init = function() {
 // 检测零散的文件变化
 WatchFilesManage.prototype.watchFileChange = function(file) {
 	fs.watchFile(path.resolve(config.workPath + file), function(curr, prev) {
-		console.log('Modified: ' + file + ' ' + curr.mtime.toUTCString());
+		console.log('Modified: ' + paths.base + file + ' ' + curr.mtime.toUTCString());
 		updateByWatchFile(file);
 	});
 }
