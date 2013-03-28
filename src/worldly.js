@@ -117,7 +117,8 @@ function updateByWatchFile(file) {
 	var type = getFileType(file),
 	combinType,
 	typeFiles,
-	f;
+	f,
+	p;
 	if (type == 'css') {
 		combinType = 'combinCSS';
 		f = cssMinifier;
@@ -131,8 +132,12 @@ function updateByWatchFile(file) {
 			if (typeFiles[item].fileIn[i] == file) {
 				f(typeFiles[item].fileIn, typeFiles[item].fileOut);
 				shell.prompt();
-				console.log('Compiled: ' + paths.base + config.buildPath + typeFiles[item].fileOut);
-				shell.prompt();
+				p = config.buildPath + typeFiles[item].fileOut;			
+				fs.stat(p, function(err, stats){
+					if (err) throw err;
+					console.log('Compiled: ' + p + '  size: ' + stats.size + 'B');
+					shell.prompt();
+				});
 				break;
 			}
 		}
@@ -163,7 +168,7 @@ WatchFilesManage.prototype.init = function() {
 // 检测零散的文件变化
 WatchFilesManage.prototype.watchFileChange = function(file) {
 	fs.watchFile(path.resolve(config.workPath + file), function(curr, prev) {
-		console.log('Modified: ' + paths.base + file + ' ' + curr.mtime.toUTCString());
+		console.log('Modified: ' + config.workPath+ file + ' ' + curr.mtime.toUTCString());
 		updateByWatchFile(file);
 	});
 }
